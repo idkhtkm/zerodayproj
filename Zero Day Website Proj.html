@@ -117,6 +117,13 @@
 
         /* Ajuste para versão desktop */
         @media (min-width: 601px) {
+            
+            .grid-item iframe {
+                width: 350px;
+                height: 200px;
+                border-radius: 3px;
+            }
+            
             .main-grid-container {
                 grid-template-columns: 1fr 1fr; /* Grade com duas colunas no desktop */
             }
@@ -155,17 +162,13 @@
             Zero Day is a 2003 American found footage drama film written and directed by Ben Coccio, starring Andre Keuck and Cal Robertson, revolving around a duo planning a school shooting through the perspective of a video filming camera.
         </div>
         <div class="grid-item" id="grid2">
-            <video controls>
-                <source src="videos/Zero Day (2003).mp4" type="video/mp4">
-            </video>
+            <iframe class='sproutvideo-player' src='https://videos.sproutvideo.com/embed/1191d0bf101febc598/08236f2065ec9ac3' frameborder='0' allowfullscreen referrerpolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
         </div>
         <div class="grid-item" id="text-between">
             "That would be good in the making of"
         </div>
         <div class="grid-item" id="grid4">
-            <video controls>
-                <source src="videos/Making Off Zero Day.mp4" type="video/mp4">
-            </video>
+            <iframe class='sproutvideo-player' src='https://videos.sproutvideo.com/embed/a791d0bf101febcb2e/16a7a28833b754c4' frameborder='0' allowfullscreen referrerpolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
         </div>
     </div>
 
