@@ -3,50 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero Day Invasion Plan</title>
+    <title>The Zero Day Invasion Plan</title>
     <style>
-
         body {
             margin: 0;
-            padding: 0;
-            font-family: 'Times New Roman', serif;
+            padding: 20px; /* Espaço nas bordas */
+            font-family: 'Arial', sans-serif;
             background-color: #4B5320;
             color: #ffd700;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            height: 100%;
             font-weight: bold;
         }
 
         h1 {
-            margin: 20px 0 10px 0;
-            font-size: 2.5rem;
-            color: #ffd700;
-            text-transform: uppercase;
+            margin: 10px 0 10px 0; /* Subiu o título no topo */
+            font-size: 2rem;
             text-align: center;
-            font-weight: bold;
         }
 
         .subtitle {
-            font-size: 1.1rem;
-            color: #ffd700;
+            font-size: 1rem;
             text-align: center;
-            font-weight: bold;
         }
 
         .spacer {
             height: 15px;
         }
 
-        .grid-container {
+        .main-grid-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 5px;
-            width: 90%;
+            grid-template-columns: 1fr; /* Padrão: uma coluna */
+            gap: 10px;
+            width: 100%;
             max-width: 800px;
-            padding: 15px;
+            padding: 10px;
             background-color: #454B1B;
             border-radius: 8px;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
@@ -55,12 +48,10 @@
         .grid-item {
             padding: 10px;
             text-align: center;
-            border: 3px solid #6e7740;
+            border: 2px solid #6e7740;
             border-radius: 5px;
             background-color: #6e7740;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            font-size: 1.1rem;
-            font-weight: bold;
+            font-size: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -68,7 +59,7 @@
 
         video {
             width: 100%;
-            border-radius: 3px;
+            border-radius: 5px;
         }
 
         .text-section {
@@ -80,42 +71,105 @@
             border-radius: 8px;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
             color: #ffd700;
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.6;
             text-align: justify;
         }
 
         .text-section h1 {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             margin-bottom: 10px;
             text-align: center;
         }
 
+        a {
+            color: #ffd700;
+            text-decoration: underline; /* Sublinhado */
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        /* Estilo para dispositivos móveis */
+        @media (max-width: 600px) {
+            .text-section {
+                padding: 25px;
+            }
+
+            body {
+                padding: 25px; /* Mais espaço nas bordas */
+            }
+
+            h1 {
+                margin: 5px 0; /* Subiu o título no topo */
+            }
+
+            .main-grid-container {
+                grid-template-columns: 1fr; /* Mantém uma coluna no mobile */
+            }
+
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Ajuste para versão desktop */
+        @media (min-width: 601px) {
+            .main-grid-container {
+                grid-template-columns: 1fr 1fr; /* Grade com duas colunas no desktop */
+            }
+
+            .grid-item:nth-child(1) {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .grid-item:nth-child(2) {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .grid-item:nth-child(3) {
+                grid-column: 2; /* Texto vai para a direita */
+                grid-row: 2;
+            }
+
+            .grid-item:nth-child(4) {
+                grid-column: 1; /* Vídeo vai para a esquerda */
+                grid-row: 2;
+            }
+        }
     </style>
 </head>
-
 <body>
-
     <h1>THE ZERO DAY INVASION PLAN</h1>
     <div class="subtitle">PRESENTED BY</div>
     <div class="subtitle">THE ARMY OF TWO</div>
     <div class="spacer"></div>
-    <div class="grid-container">
-        <div class="grid-item" id="grid1">Zero Day is a 2003 American found footage drama film written and directed by Ben Coccio, starring Andre Keuck and Cal Robertson, revolving around a duo planning a school shooting through the perspective of a video filming camera.</div>
+
+    <!-- Nova grade combinada -->
+    <div class="main-grid-container">
+        <div class="grid-item" id="grid1">
+            Zero Day is a 2003 American found footage drama film written and directed by Ben Coccio, starring Andre Keuck and Cal Robertson, revolving around a duo planning a school shooting through the perspective of a video filming camera.
+        </div>
         <div class="grid-item" id="grid2">
             <video controls>
-                <source src="https://streamtape.com/v/vzBDGYYG26t4448/Zero_Day_%282003%29.mp4" type="video/mp4">
+                <source src="videos/Zero Day (2003).mp4" type="video/mp4">
             </video>
         </div>
-        <div class="grid-item" id="grid3">
+        <div class="grid-item" id="text-between">
+            "That would be good in the making of"
+        </div>
+        <div class="grid-item" id="grid4">
             <video controls>
-                <source src="https://streamtape.com/v/PkzVZX3vaXi0V8a/Making_Off_Zero_Day.mp4" type="video/mp4">
+                <source src="videos/Making Off Zero Day.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="grid-item" id="grid4">"That would be good in the making of"</div>
     </div>
 
-
+    <!-- Textos adicionais -->
     <div class="text-section">
         <h1>SCHOOL RESOURCE OFFICERS</h1>
         <p>
@@ -124,7 +178,6 @@
             In this scenario, the SRO poses this threat, and should therefore be eliminated expeditiously.
         </p>
     </div>
-
 
     <div class="text-section">
         <h1>CONFINEMENT</h1>
@@ -138,7 +191,6 @@
         </p>
     </div>
 
-
     <div class="text-section">
         <h1>THOROUGH ELIMINATION</h1>
         <p>
@@ -150,7 +202,6 @@
         </p>
     </div>
 
-
     <div class="text-section">
         <h1>RETREAT</h1>
         <p>
@@ -159,7 +210,6 @@
             fact that you may become too comfortable with its implementation.
         </p>
     </div>
-
 
     <div class="text-section">
         <h1>IN CLOSING</h1>
@@ -170,16 +220,14 @@
         </p>
     </div>
 
-
     <div class="text-section">
-	• In conclusion, live fast, live hard, and die with any combination of these two.
+        • In conclusion, live fast, live hard, and die with any combination of these two.
     </div>
 
     <div class="text-section">
-	• Made by <a href="https://github.com/idkhtkm" style="color: #ffd700">idkhtkm</a>
+        • Made by <a href="https://github.com/idkhtkm">idkhtkm</a>
     </div>
 
     <h1 style="text-align: center; margin-bottom: 30px;">FIN</h1>
-
 </body>
 </html>
