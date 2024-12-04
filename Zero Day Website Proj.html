@@ -7,7 +7,7 @@
     <style>
         body {
             margin: 0;
-            padding: 20px; /* Espaço nas bordas */
+            padding: 20px;
             font-family: 'Arial', sans-serif;
             background-color: #4B5320;
             color: #ffd700;
@@ -19,7 +19,7 @@
         }
 
         h1 {
-            margin: 10px 0 10px 0; /* Subiu o título no topo */
+            margin: 10px 0 10px 0;
             font-size: 2rem;
             text-align: center;
         }
@@ -35,7 +35,7 @@
 
         .main-grid-container {
             display: grid;
-            grid-template-columns: 1fr; /* Padrão: uma coluna */
+            grid-template-columns: 1fr;
             gap: 10px;
             width: 100%;
             max-width: 800px;
@@ -84,29 +84,29 @@
 
         a {
             color: #ffd700;
-            text-decoration: underline; /* Sublinhado */
+            text-decoration: underline;
         }
 
         a:hover {
             text-decoration: none;
         }
 
-        /* Estilo para dispositivos móveis */
+        /* for cellphone */
         @media (max-width: 600px) {
             .text-section {
                 padding: 25px;
             }
 
             body {
-                padding: 25px; /* Mais espaço nas bordas */
+                padding: 25px;
             }
 
             h1 {
-                margin: 5px 0; /* Subiu o título no topo */
+                margin: 5px 0;
             }
 
             .main-grid-container {
-                grid-template-columns: 1fr; /* Mantém uma coluna no mobile */
+                grid-template-columns: 1fr;
             }
 
             video {
@@ -115,7 +115,7 @@
             }
         }
 
-        /* Ajuste para versão desktop */
+        /* for desktop */
         @media (min-width: 601px) {
             
             .grid-item iframe {
@@ -125,7 +125,7 @@
             }
             
             .main-grid-container {
-                grid-template-columns: 1fr 1fr; /* Grade com duas colunas no desktop */
+                grid-template-columns: 1fr 1fr;
             }
 
             .grid-item:nth-child(1) {
@@ -139,12 +139,12 @@
             }
 
             .grid-item:nth-child(3) {
-                grid-column: 2; /* Texto vai para a direita */
+                grid-column: 2;
                 grid-row: 2;
             }
 
             .grid-item:nth-child(4) {
-                grid-column: 1; /* Vídeo vai para a esquerda */
+                grid-column: 1;
                 grid-row: 2;
             }
         }
@@ -172,7 +172,6 @@
         </div>
     </div>
 
-    <!-- Textos adicionais -->
     <div class="text-section">
         <h1>SCHOOL RESOURCE OFFICERS</h1>
         <p>
